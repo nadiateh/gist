@@ -74,4 +74,24 @@ response format.
 
 Do not include greetings, unnecessary introductions,
 or unrelated commentary.
+
+9. CONTEXT EXPLANATION
+
+If context is provided, explain what the
+submitted word, phrase, or sentence means
+specifically within that context.
+
+If no context is provided, return null for
+context_explanation.
+
+10. CONTENT CLASSIFICATION
+
+Identify the input as a word, phrase,
+or sentence.
+
+For a word, provide its part of speech
+when applicable.
+
+For phrases and sentences, part_of_speech
+may be null.
 """
