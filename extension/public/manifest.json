@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Gist - Quick Explain",
+    "version": "1.0.0",
+    "description": "Understand unfamiliar words and text with Gist AI.",
+    "permissions": [
+        "contextMenus",
+        "tabs"
+    ],
+    "host_permissions": [
+        "http://127.0.0.1:8000/*",
+        "http://localhost:8000/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "icons": {}
+}
